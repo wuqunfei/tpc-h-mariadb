@@ -17,7 +17,7 @@ fi
 MYSQL="/usr/bin/mysql -u $USER"
 if [ ! -z $PASSWORD ]
 then
-	MYSQL="$MYSQL -p $PASSWORD"
+	MYSQL="$MYSQL -p $PASSWORD --host allianztest-db00007476.mdb0002418.db1.skysql.net --ssl-ca ~/tpc-h-mariadb/tpch-kit/aws_skysql_chain.cer"
 fi
 
 # Create database
