@@ -87,11 +87,11 @@
 
 #ifdef 	SQLSERVER
 #define GEN_QUERY_PLAN  "set showplan on\nset noexec on\ngo\n"
-#define START_TRAN      "begin transaction\ngo\n"
-#define END_TRAN        "commit transaction\ngo\n"
+#define START_TRAN      "BEGIN WORK;"
+#define END_TRAN        "COMMIT WORK;"
 #define SET_OUTPUT      ""
-#define SET_ROWCOUNT    "set rowcount %d\ngo\n\n"
-#define SET_DBASE       "use %s\ngo\n"
+#define SET_ROWCOUNT    "limit %d;\n\n"
+#define SET_DBASE       "use %s;\n"
 #endif
 
 #ifdef 	SYBASE
