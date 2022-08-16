@@ -14,7 +14,7 @@ then
 	PASSWORD=$2
 fi
 
-MYSQL="/usr/local/mysql/bin/mysql -u $USER"
+MYSQL="/usr/bin/mysql -u $USER"
 if [ ! -z $PASSWORD ]
 then
 	MYSQL="$MYSQL -p $PASSWORD"
