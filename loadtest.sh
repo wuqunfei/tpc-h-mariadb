@@ -21,7 +21,7 @@ then
 fi
 
 # Create database
-$MYSQL -e "create database tpch;"
+$MYSQL -e "create database if not exists tpch;"
 
 MYSQL="$MYSQL tpch"
 
